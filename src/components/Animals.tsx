@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Animal } from "../models/Animal";
 import { Ianimal } from "../models/Ianimal"
-
+import './animals.css';
 
 export const Animals = () => {
     const [animals, setAnimals] = useState<Animal[]>([]);
@@ -50,6 +50,7 @@ export const Animals = () => {
 
             {AnimalsHtml}
         </div>
+
 
     )
 

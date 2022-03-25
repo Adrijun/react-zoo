@@ -1,0 +1,25 @@
+
+
+body {
+    background-color: green;
+}
+
+section{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+.imageClass {
+    height: 30%;
+    width: 30%;
+}
+
+button{
+    background-color:white;
+    margin-top: 10px;
+    height: 10vh;
+    width: 20vh;
+}
+

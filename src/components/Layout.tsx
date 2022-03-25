@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-
+import './layout.css';
 export const Layout = () => {
     return (
         <>
@@ -10,6 +10,7 @@ export const Layout = () => {
 
             <main>
                 <Outlet></Outlet>
+
             </main>
         </>
     );

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { Animal } from "../models/Animal";
 import { Ianimal } from "../models/Ianimal";
 
@@ -33,12 +33,14 @@ export const ShowAnimals = () => {
 
 
     return <>
-        <h2> {animal?.name} </h2>
-        <p> {animal?.shortDescription}</p>
-        <p>  {animal?.isFed}</p>
-        <p> Medicin : {animal?.medicine}  </p>
-        <img src={animal?.imageUrl} alt={animal?.name}></img>
-
+        <section>
+            <h2> {animal?.name} </h2>
+            <p> {animal?.shortDescription}</p>
+            <p>  {animal?.isFed}</p>
+            <p> Medicin : {animal?.medicine}  </p>
+            <img className="imageClass" src={animal?.imageUrl} alt={animal?.name}></img>
+            <button> <Link to="/">Tillbaka till djuren</Link> </button>
+        </section>
     </>
 
 

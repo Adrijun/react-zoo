@@ -36,7 +36,7 @@ export const Animals = () => {
     }, []);
 
     let AnimalsHtml = animals.map((animal: Animal) => {
-        let AnimalsLink = `/Animals/${animal.id}`;
+        let AnimalsLink = `/animals/${animal.id}`;
 
         return (
             <div key={animal.id}>
@@ -47,16 +47,7 @@ export const Animals = () => {
     return (
 
         <div>
-            {/* {animals.map((animal) => (
-                <ul key={animal.id}>
-                    <li> {animal.name}</li>
-                    <li> {animal.id}</li>
-                    <li> {animal.imageUrl}</li>
-                    <li ></li>
-                </ul>
 
-
-            ))} */}
             {AnimalsHtml}
         </div>
 

@@ -31,15 +31,31 @@ export const ShowAnimals = () => {
     }, [animalId]);
 
 
+    function AnimalIsFed() {
+
+        if (animal) {
+            setAnimal({
+                ...animal,
+                isFed: true,
+
+            })
+        }
+        console.log(animal);
+        console.log(new Date());
+
+    }
 
     return <>
         <section>
+
             <h2> {animal?.name} </h2>
             <p> {animal?.shortDescription}</p>
-            <p>  {animal?.isFed}</p>
+            <p> {animal?.isFed}</p>
             <p> Medicin : {animal?.medicine}  </p>
             <img className="imageClass" src={animal?.imageUrl} alt={animal?.name}></img>
-            <button> <Link to="/">Tillbaka till djuren</Link> </button>
+            <button onClick={AnimalIsFed} disabled={animal?.isFed} > Mata djuret </button>
+            <Link to="/"><button>Tillbaka till djuren</button></Link>
+
         </section>
     </>
 
